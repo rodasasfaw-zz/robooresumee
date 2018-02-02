@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Robo Resume</title>
+</head>
+<a href="/addeducation">add education</a><br />
+<a href="/addexperience">add experience</a><br />
+<a href="/addskill">add skill</a><br />
+
+<body>
+<p th:inline="text"> [[${resume.firstname}]]  [[${resume.lastname}]] <br />
+
+    [[${resume.email}]]
+
+<h4> Education</h4>
+<h4 th:inline="text">1</h4>
+[[${resume.school}]]<br />
+[[${resume.degree}]]<br />
+[[${resume.year}]]<br />
+
+<h4 th:inline="text">Experience</h4>
+[[${resume.jobtitle}]]<br />
+[[${resume.company}]]<br />
+Duties: [[${resume.duties}]]<br />
+[[${resume.beginyear}]]- [[${resume.endyear}]]<br/>
+
+<h4 >Skills</h4>
+[[${resume.skill}]] - [[${resume.rating}]]<br />
+
+
+</p>
+
+</body>
+</html>

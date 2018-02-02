@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+<form action="#" th:action="@{/addskill}" th:object="${resumee}"
+      method="post">
+    <H4>Education</H4>
+
+    Skill: <input type="text" th:field="*{skill}" /><br />
+    rating: <input type="number" th:field="*{rating}" /><br />
+    <input type="submit" value="Submit"/>
+
+</form>
+
+</body>
+</html>

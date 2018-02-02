@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+<form action="#" th:action="@{/addeducation}" th:object="${resume}"
+      method="post">
+<H4>Education</H4>
+
+school: <input type="text" th:field="*{school}" /><br />
+Degree: <input type="text" th:field="*{degree}" /><br />
+year:<input type="text" th:field="*{year}" /><br />
+    <input type="submit" value="Submit"/>
+</form>
+
+</body>
+</html>

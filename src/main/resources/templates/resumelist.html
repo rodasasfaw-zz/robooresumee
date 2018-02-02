@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>robo resume</title>
+</head>
+<body>
+<a href="/addresume">add resume</a><br />
+<table>
+
+    <tr th:each="resumeeach : ${resume}">
+        <td th:text="${resumeeach.school}"></td>
+        <td th:text="${resumeeach.degree}"></td>
+        <td th:text="${resumeeach.year}"></td>
+        <td>
+            <a th:href="@{/detail/{id}(id=${resume.id})}">Update</a> -
+            <a th:href="@{/detail/{id}(id=${resume.id})}">Details</a> -
+            <a th:href="@{/delete/{id}(id=${resume.id})}">Delete</a> -
+        </td>
+    </tr>
+</table>
+</body>
+</html>

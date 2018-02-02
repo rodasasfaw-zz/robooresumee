@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+<form action="#" th:action="@{/addexperience}" th:object="${resumee}"
+      method="post">
+    <H4>Education</H4>
+
+    Job Title: <input type="text" th:field="*{jobtitle}" /><br />
+    Company: <input type="text" th:field="*{company}" /><br />
+    Begin year:<input type="text" th:field="*{beginyear}" /><br />
+    End year:<input type="text" th:field="*{endyear}" /><br />
+    <input type="submit" value="Submit"/>
+</form>
+
+</body>
+</html>
